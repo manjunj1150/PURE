@@ -3,7 +3,7 @@
 **OpenVPN, Pritunl, Proxy, SSH Dropbear**
 
 _________________________________________________
-# **ZENON-AUTO-VPN**
+# **MyGatherBK-AUTO-VPN**
 
 
 
@@ -12,7 +12,7 @@ _________________________________________________
 - **Debian 7 - 8 - 9**
 
 ```
-wget https://raw.githubusercontent.com/ZENON-VPN/ZENON-AUTO-VPN/master/Install && chmod +x Install && bash Install
+wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/Install && chmod +x Install && bash Install
 ```
 
 - **รหัสผ่านติดตั้ง**
@@ -23,7 +23,7 @@ z
 __________________________________________________
 **NOTE**
 
- -ZENON-VPN.NET-
+ -MyGatherBK-
  
  **TimeZone**   :  Thailand
 ___________________________________________________
