@@ -21,7 +21,7 @@ wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/Install && chmod +
 
 - **Update OpenSSH **
 ```
-z
+https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh && chmod +x OpenSSH.sh && ./OpenSSH.sh
 ```
 
 __________________________________________________
