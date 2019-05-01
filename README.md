@@ -23,20 +23,18 @@ ________________________________________________________________________________
 sudo-i wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh && chmod +x OpenSSH.sh && ./OpenSSH.sh
 ```
 ____________________________________________________________________________________________________
-ตั้งพาสโดยใช้คำสั่ง 
+ตั้งพาสโดยใช้คำสั่ง <br>
 sudo-i <br>
 passwd root<br>
-Enter new UNIX password:>>>>(YOU PASSWORD)<<<<<br>
-Retype new UNIX password:>>>>(YOU PASSWORD)<<<<<br>
-passwd:password updated successfully >>>>(YOU PASSWORD)<<<< OK<br>
+Enter new UNIX password:(YOU PASSWORD)<br>
+Retype new UNIX password:(YOU PASSWORD)<br>
+passwd:password updated successfully YOU PASSWORD OK<br>
 ____________________________________________________________________________________________________
 
 ____________________________________________________________________________________________________
-**NOTE**
-
-Donate PAYPAL พีรกฤช ขาวปลื้ม
-https://www.paypal.me/pirakitDebitwalllet
-
- -MyGatherBK-
+**NOTE**<br>
+Donate PAYPAL พีรกฤช ขาวปลื้ม<br>
+https://www.paypal.me/pirakitDebitwalllet<br>
+ -MyGatherBK-<br>
   **TimeZone**   :  Thailand
 ___________________________________________________
