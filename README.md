@@ -10,7 +10,7 @@ _________________________________________________
 - **Debian 7 - 8 - 9**
 
 ```
-wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/Install && chmod +x Install && bash Install
+sudo-i wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/Install && chmod +x Install && bash Install
 ```
 __________________________________________________
 - **Update OpenSSH **
@@ -20,8 +20,10 @@ __________________________________________________
 - **Debian 7 - 8 - 9**
 
 ```
-wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh && chmod +x OpenSSH.sh && ./OpenSSH.sh
+sudo-i wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh && chmod +x OpenSSH.sh && ./OpenSSH.sh
 ```
+ตั้งพาสโดยใช้คำสั่ง 
+sudo-i passwd root
 __________________________________________________
 
 __________________________________________________
