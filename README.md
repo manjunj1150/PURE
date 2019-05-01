@@ -9,17 +9,17 @@ ________________________________________________________________________________
 
 - **Debian 7 - 8 - 9**
 
-```
-sudo-i wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/Install && chmod +x Install && bash Install
-```
+sudo-i<br>
+wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/Install && chmod +x Install && bash Install
+
 ____________________________________________________________________________________________________
 ____________________________________________________________________________________________________
 - **Update OpenSSH **<br>
 -  **Ubuntu 14.04 - 16.04 - 17.04**<br>
 - **Debian 7 - 8 - 9**<br>
-```
-sudo-i wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh && chmod +x OpenSSH.sh && ./OpenSSH.sh
-```
+sudo-i<br>
+wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh && chmod +x OpenSSH.sh && ./OpenSSH.sh
+
 # **ตั้งพาส Root โดยใช้คำสั่ง** <br>
 - sudo-i <br>
 - passwd root<br>
