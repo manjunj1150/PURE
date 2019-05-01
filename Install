@@ -62,6 +62,10 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 # Menu
+	clear
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo ""
     echo "#BY FB : https://web.facebook.com/groups/527056377815518/"
     echo "#Donate : TrueWallet : 096-746-2978"
