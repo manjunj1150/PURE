@@ -355,17 +355,9 @@ END
 	apt-get -y install vnstat
 	
 	clear
-    echo ""
-    echo " ______ _____  _   _   ___   _   _ "
-    echo "(___  /|  ___)| \ | | / _ \ | \ | |"
-    echo "   / / | |_   |  \| || | | ||  \| |"
-    echo "  / /  |  _)  |     || | | ||     |"
-    echo " / /__ | |___ | |\  || |_| || |\  |"
-    echo "/_____)|_____)|_| \_| \___/ |_| \_|"
-    echo ""                                        
-    echo "#BY FB : Ekkachai Chompoowiset"
-    echo "#Donate : TrueWallet : 097-206-5255"
-    echo ""
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
 	echo "OpenVPN, Squid Proxy, Nginx .....Install finish."
 	echo ""
 	echo "IP Server : $IP"
