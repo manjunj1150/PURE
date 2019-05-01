@@ -20,7 +20,7 @@ __________________________________________________
 - **Debian 7 - 8 - 9**
 
 ```
-https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh && chmod +x OpenSSH.sh && ./OpenSSH.sh
+wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh && chmod +x OpenSSH.sh && ./OpenSSH.sh
 ```
 __________________________________________________
 
