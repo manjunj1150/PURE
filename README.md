@@ -24,11 +24,11 @@ sudo-i wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh 
 ```
 ____________________________________________________________________________________________________
 ตั้งพาสโดยใช้คำสั่ง 
-sudo-i 
-passwd root
-Enter new UNIX password:>>>>(YOU PASSWORD)<<<<
-Retype new UNIX password:>>>>(YOU PASSWORD)<<<<
-passwd:password updated successfully >>>>(YOU PASSWORD)<<<< OK
+sudo-i <br>
+passwd root<br>
+Enter new UNIX password:>>>>(YOU PASSWORD)<<<<<br>
+Retype new UNIX password:>>>>(YOU PASSWORD)<<<<<br>
+passwd:password updated successfully >>>>(YOU PASSWORD)<<<< OK<br>
 ____________________________________________________________________________________________________
 
 ____________________________________________________________________________________________________
