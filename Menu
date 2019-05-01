@@ -15,16 +15,9 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 # Menu
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -142,16 +135,9 @@ if [[ $CHECKSYSTEM ]]; then
 		echo -e "$PASSWORD\n$PASSWORD\n"|passwd $CLIENT &> /dev/null
 
 		clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -228,16 +214,9 @@ else
 	echo -e "$CLIENT\n$CLIENT\n"|passwd $CLIENT &> /dev/null
 
 	clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -270,16 +249,9 @@ fi
 		echo -e "$PASSWORD\n$PASSWORD\n"|passwd $CLIENT &> /dev/null
 
 		clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -350,16 +322,9 @@ fi
 	4) # ==================================================================================================================
 
 clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -409,16 +374,9 @@ exit
 		read -p "ยืนยันรหัสผ่านอีกครั้ง : " RETYPEPASSWORD
 
 		if [[ $NEWPASSWORD = $RETYPEPASSWORD ]]; then
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -466,16 +424,9 @@ if [ $? -eq 0 ]; then
 	useradd -e `date -d "$TimeActive days" +"%Y-%m-%d"` -s /bin/false -M $CLIENT
 	EXP="$(chage -l $CLIENT | grep "Account expires" | awk -F": " '{print $2}')"
 	echo -e "$CLIENT\n$CLIENT\n"|passwd $CLIENT &> /dev/null
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -514,16 +465,9 @@ fi
 fi
 
 clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -678,16 +622,9 @@ RXTOTAL=$(vnstat -i $INTERFACE | grep "rx:" | awk '{print $2" "substr ($9, 1, 1)
 TXTOTAL=$(vnstat -i $INTERFACE | grep "tx:" | awk '{print $5" "substr ($9, 1, 1)}')
 
 clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -916,16 +853,9 @@ if [[ ! -e /usr/local/bin/Banwidth-Per-Client ]]; then
 	wget -O /usr/local/bin/Banwidth-Per-Client "https://raw.githubusercontent.com/MyGatherBk/PURE/master/Banwidth-Per-Client"
 	chmod +x /usr/local/bin/Banwidth-Per-Client
 	clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -937,16 +867,9 @@ if [[ ! -e /usr/local/bin/Banwidth-Per-Client ]]; then
 	echo ""
 else
 	clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -962,17 +885,10 @@ fi
 
 	13) # ==================================================================================================================
 
-clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+	clear
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -1050,17 +966,10 @@ if [[ ! $CHECKSYSTEM ]]; then
 	exit
 fi
 
-clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+	clear
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -1142,17 +1051,10 @@ esac
 
 	15) # ==================================================================================================================
 
-clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+	clear
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -1233,17 +1135,10 @@ esac
 
 	16) # ==================================================================================================================
 
-clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+	clear
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
@@ -1468,17 +1363,10 @@ esac
 
 	17) # ==================================================================================================================
 
-clear
-    echo ""
-    echo " ___  ___      _____       _   _              ______ _   __"
-    echo " |  \/  |     |  __ \     | | | |             | ___ \ | / /"
-    echo " | .  . |_   _| |  \/ __ _| |_| |__   ___ _ __| |_/ / |/ /"
-    echo " | |\/| | | | | | __ / _` | __| '_ \ / _ \ '__| ___ \    \"
-    echo " | |  | | |_| | |_\ \ (_| | |_| | | |  __/ |  | |_/ / |\  \"
-    echo " \_|  |_/\__, |\____/\__,_|\__|_| |_|\___|_|  \____/\_| \_/"
-    echo "          __/ |                                            "
-    echo "         |___/                                             "
-    echo ""
+	clear
+echo ""
+echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+echo ""
     echo "#BY FB : Pirakit Khawpleum"
     echo "#Donate : TrueWallet : 096-746-2978"
     echo ""
