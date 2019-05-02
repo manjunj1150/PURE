@@ -9,7 +9,7 @@ ________________________________________________________________________________
 
 - **Debian 7 - 8 - 9**
 
-sudo-i<br>
+sudo su <br>
 wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/Install && chmod +x Install && bash Install
 
 ____________________________________________________________________________________________________
@@ -21,7 +21,7 @@ sudo-i<br>
 wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh && chmod +x OpenSSH.sh && ./OpenSSH.sh
 
 # **ตั้งพาส Root โดยใช้คำสั่ง** <br>
-- sudo-i <br>
+sudo su <br>
 - passwd root<br>
 - Enter new UNIX password:(YOU PASSWORD)<br>
 - Retype new UNIX password:(YOU PASSWORD)<br>
