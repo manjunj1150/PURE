@@ -64,7 +64,7 @@ echo ""
 echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
-	echo -e "ฟังก์ชั่นสคริปท์ ${GRAY}*.:｡ ✿*ﾟ‘ﾟ･✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:* *.:｡✿${NC}"
+	echo -e "ฟังก์ชั่นสคริปท์ ${GRAY}MyGatherBK-VPN${NC}"
 	echo ""
 	if [[ -e /etc/openvpn/server.conf ]]; then
 		echo -e "|${GRAY} 1${NC}| ถอนการติดตั้ง OPENVPN ที่ควบคุมการใช้งานผ่านเทอร์มินอล ${GREEN} ✔   ${NC}"
@@ -96,7 +96,7 @@ if [[ -e /usr/local/bin/Check-Thai ]]; then
 	read -p "เลือกหัวข้อฟังก์ชั่นที่ต้องการใช้งาน : " FUNCTIONSCRIPT
 
 elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
-	echo -e "FUNCTION SCRIPT ${GRAY}.:｡ ✿*ﾟ‘ﾟ･✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:* *.:｡✿${NC}"
+	echo -e "FUNCTION SCRIPT ${GRAY}MyGatherBK-VPN${NC}"
 	echo ""
 	if [[ -e /etc/openvpn/server.conf ]]; then
 		echo -e "|${GRAY} 1${NC}| REMOVE OPENVPN TERMINAL CONTROL ${GREEN} ✔   ${NC}"
@@ -984,7 +984,7 @@ END
 	echo ""
 	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
 	echo ""
-	echo "Source by Mnm Ami"
+	echo "Admin MyGatherBK"
 	echo "Donate via TrueMoney Wallet : 096-746-2978"
 	echo ""
 	echo "Squid Proxy .....Install finish."
