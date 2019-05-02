@@ -17,7 +17,7 @@ ________________________________________________________________________________
 - **Update OpenSSH **<br>
 -  **Ubuntu 14.04 - 16.04 - 17.04**<br>
 - **Debian 7 - 8 - 9**<br>
-sudo-i<br>
+sudo su<br>
 wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh && chmod +x OpenSSH.sh && ./OpenSSH.sh
 
 # **ตั้งพาส Root โดยใช้คำสั่ง** <br>
