@@ -866,7 +866,7 @@ echo "Port Proxy : $PROXY"
 echo ""
 echo "Pritunl : http://$IP"
 echo ""
-pritunl setup-key
+echo "pritunl setup-key"
 echo ""
 exit
 
