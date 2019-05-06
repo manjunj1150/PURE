@@ -21,7 +21,7 @@ ________________________________________________________________________________
 - wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh && chmod +x OpenSSH.sh && ./OpenSSH.sh
 
 # **ตั้งพาส Root โดยใช้คำสั่ง** <br>
-- sudo-i <br>
+- sudo -i <br>
 - passwd root<br>
 - Enter new UNIX password:(YOU PASSWORD)<br>
 - Retype new UNIX password:(YOU PASSWORD)<br>
