@@ -690,7 +690,7 @@ elif [[ "$VERSION_ID" = 'VERSION_ID="9"' ]]; then
 	apt-get --assume-yes install pritunl mongodb-server
 	systemctl start mongodb pritunl
 	systemctl enable mongodb pritunl
-
+	
 		while [[ $Squid != "Y" && $NoSquid != "N" ]]; do
 			echo ""
 			read -p "ต้องการติดตั้ง Squid Proxy หรือไม่ (Y or N) : " -e -i Y Squid
@@ -698,14 +698,14 @@ elif [[ "$VERSION_ID" = 'VERSION_ID="9"' ]]; then
 
 # Ubuntu 14.04
 elif [[ "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
-	echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" > /etc/apt/sources.list.d/mongodb-org-3.6.list
-	echo "deb http://repo.pritunl.com/stable/apt xenial main" > /etc/apt/sources.list.d/pritunl.list
+	echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.6 multiverse" > /etc/apt/sources.list.d/mongodb-org-3.6.list
+	echo "deb http://repo.pritunl.com/stable/apt trusty main" > /etc/apt/sources.list.d/pritunl.list
 	apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
 	apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 	apt-get update
 	apt-get --assume-yes install pritunl mongodb-org
-	systemctl start pritunl mongod
-	systemctl enable pritunl mongod
+	systemctl start mongodb pritunl
+	systemctl enable mongodb pritunl
 
 		while [[ $Squid != "Y" && $NoSquid != "N" ]]; do
 			echo ""
@@ -720,8 +720,8 @@ elif [[ "$VERSION_ID" = 'VERSION_ID="16.04"' ]]; then
 	apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 	apt-get update
 	apt-get --assume-yes install pritunl mongodb-org
-	systemctl start pritunl mongod
-	systemctl enable pritunl mongod
+	systemctl start mongodb pritunl
+	systemctl enable mongodb pritunl
 
 		while [[ $Squid != "Y" && $NoSquid != "N" ]]; do
 			echo ""
@@ -734,8 +734,8 @@ elif [[ "$VERSION_ID" = 'VERSION_ID="17.04"' ]]; then
 	apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 	apt-get update
 	apt-get --assume-yes install pritunl mongodb-server
-	systemctl start pritunl mongodb
-	systemctl enable pritunl mongodb
+	systemctl start mongodb pritunl
+	systemctl enable mongodb pritunl
 
 		while [[ $Squid != "Y" && $NoSquid != "N" ]]; do
 			echo ""
