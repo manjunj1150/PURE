@@ -33,18 +33,14 @@ ________________________________________________________________________________
 - echo "Banner /etc/bannerssh" >> /etc/ssh/sshd_config<br>
 - nano /etc/bannerssh<br>
 ======================================<br>
-<font color="#CC00CC"> ~¤~ ๏[-ิ_•ิ]๏
-~¤~M.G.BK.P~¤~ ๏[-ิ_•ิ]๏ ~¤~</font><br
+<font color="#CC00CC"> ~¤~ ๏[-ิ_•ิ]๏~¤~M.G.BK.P~¤~ ๏[-ิ_•ิ]๏ ~¤~</font><br>
 ======================================<br>
-<font color="#FF0000"> SG Google Cloud Platform
-</font><br> <font
-color="#0000FF"> Admin By MyGatherBK™ </font><br>
+<font color="#FF0000"> SG Google Cloud Platform</font><br>
+<font color="#0000FF"> Admin By MyGatherBK™ </font><br>
 ======================================<br>
-<font color="#FFA500"> สนับสนุน Truemoney
-wallet </font><br>
+<font color="#FFA500"> สนับสนุน Truemoney wallet </font><br>
 <font color="#FF00FF">  096-746-2978 </font><br>
-<font
-color="#000000"> ดูหนัง-ฟังเพลง โหลดแอฟ เล่นเกมได้เป็นบางเกม Youtube </font><br>
+<font color="#000000"> ดูหนัง-ฟังเพลง โหลดแอฟ เล่นเกมได้เป็นบางเกม Youtube </font><br>
 ======================================<br>
 <font color="red"> VPS TO VPN ส่วนตัว ทำแจก
 </font><br>
