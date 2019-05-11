@@ -12,10 +12,7 @@ if readlink /proc/$$/exe | grep -q "dash"; then
 fi
 
 if [[ "$EUID" -ne 0 ]]; then
-	echo ""
-    echo "Please log in to the root user before running the script"
-    echo "root user login command is sudo -i"
-	echo ""
+	echo "Sorry, you need to run this as root"
 	exit
 fi
 
@@ -36,21 +33,7 @@ elif [[ -e /etc/centos-release || -e /etc/redhat-release ]]; then
 else
 	echo "Looks like you aren't running this installer on Debian, Ubuntu or CentOS"
 	exit
-
-if [[ -e /etc/openvpn/server.conf ]]; then
-	while :
-	do
-	clear
-		echo "Looks like OpenVPN is already installed."
-		echo
-		echo "What do you want to do?"
-		echo "   1) INSTALL OPENVPN TERMINAL CONTROL"
-		echo "   2) INSTALL SSH DROPBEAR"
-		echo "   3) Remove OpenVPN"
-		echo "   4) Exit"
-			read -p "Select an option [1-4]: " option
-		case $option in
-	1) # ==================================================================================================================
+fi
 
 newclient () {
 	# Generates the custom client.ovpn
@@ -69,50 +52,72 @@ newclient () {
 	echo "</tls-auth>" >> ~/$1.ovpn
 }
 
-	;;
-
-	2) # ==================================================================================================================
-
-if [[ -e /etc/default/dropbear ]]; then
-	echo ""
-	echo "IP นี้ได้ติดตั้ง SSH Dropbear ไปก่อนหน้านี้แล้ว"
-	echo ""
-	exit
-
-elif [[ ! -e /etc/default/dropbear ]]; then
-	apt-get -y install dropbear
-	sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-	/etc/init.d/dropbear restart
-	PORTSSH=$(grep '^Port ' /etc/ssh/sshd_config | cut -d " " -f 2)
+if [[ -e /etc/openvpn/server.conf ]]; then
+	while :
+	do
 	clear
-    echo ""
-    echo "#BY FB : https://web.facebook.com/groups/527056377815518/"
-    echo "#Donate : TrueWallet : 096-746-2978"
-    echo ""
-	echo "SSH Dropbear .....Install Finish."
-	echo "IP Addrsss : $IP"
-	echo "Port SSH : $PORTSSH"
-	echo ""
-	if [[ -e /etc/squid3/squid.conf ]]; then
-			PROXY=$(grep '^http_port ' /etc/squid3/squid.conf | cut -d " " -f 2)
-			echo "IP Proxy : $IP"
-			echo "Port Proxy : $PROXY"
-	elif [[ -e /etc/squid/squid.conf ]]; then
-			PROXY=$(grep '^http_port ' /etc/squid/squid.conf | cut -d " " -f 2)
-			echo "IP Proxy : $IP"
-			echo "Port Proxy : $PROXY"
-			
-	else
-		echo "No Proxy"
-	fi
-	echo ""
-	exit
-fi
-
-	;;
-	
-	3) # ==================================================================================================================
-	
+		echo "Looks like OpenVPN is already installed."
+		echo
+		echo "What do you want to do?"
+		echo "   1) Add a new user"
+		echo "   2) Revoke an existing user"
+		echo "   3) Remove OpenVPN"
+		echo "   4) Exit"
+		read -p "Select an option [1-4]: " option
+		case $option in
+			1) 
+			echo
+			echo "Tell me a name for the client certificate."
+			echo "Please, use one word only, no special characters."
+			read -p "Client name: " -e CLIENT
+			cd /etc/openvpn/easy-rsa/
+			EASYRSA_CERT_EXPIRE=3650 ./easyrsa build-client-full $CLIENT nopass
+			# Generates the custom client.ovpn
+			newclient "$CLIENT"
+			echo
+			echo "Client $CLIENT added, configuration is available at:" ~/"$CLIENT.ovpn"
+			exit
+			;;
+			2)
+			# This option could be documented a bit better and maybe even be simplified
+			# ...but what can I say, I want some sleep too
+			NUMBEROFCLIENTS=$(tail -n +2 /etc/openvpn/easy-rsa/pki/index.txt | grep -c "^V")
+			if [[ "$NUMBEROFCLIENTS" = '0' ]]; then
+				echo
+				echo "You have no existing clients!"
+				exit
+			fi
+			echo
+			echo "Select the existing client certificate you want to revoke:"
+			tail -n +2 /etc/openvpn/easy-rsa/pki/index.txt | grep "^V" | cut -d '=' -f 2 | nl -s ') '
+			if [[ "$NUMBEROFCLIENTS" = '1' ]]; then
+				read -p "Select one client [1]: " CLIENTNUMBER
+			else
+				read -p "Select one client [1-$NUMBEROFCLIENTS]: " CLIENTNUMBER
+			fi
+			CLIENT=$(tail -n +2 /etc/openvpn/easy-rsa/pki/index.txt | grep "^V" | cut -d '=' -f 2 | sed -n "$CLIENTNUMBER"p)
+			echo
+			read -p "Do you really want to revoke access for client $CLIENT? [y/N]: " -e REVOKE
+			if [[ "$REVOKE" = 'y' || "$REVOKE" = 'Y' ]]; then
+				cd /etc/openvpn/easy-rsa/
+				./easyrsa --batch revoke $CLIENT
+				EASYRSA_CRL_DAYS=3650 ./easyrsa gen-crl
+				rm -f pki/reqs/$CLIENT.req
+				rm -f pki/private/$CLIENT.key
+				rm -f pki/issued/$CLIENT.crt
+				rm -f /etc/openvpn/crl.pem
+				cp /etc/openvpn/easy-rsa/pki/crl.pem /etc/openvpn/crl.pem
+				# CRL is read with each client connection, when OpenVPN is dropped to nobody
+				chown nobody:$GROUPNAME /etc/openvpn/crl.pem
+				echo
+				echo "Certificate for client $CLIENT revoked!"
+			else
+				echo
+				echo "Certificate revocation for client $CLIENT aborted!"
+			fi
+			exit
+			;;
+			3) 
 			echo
 			read -p "Do you really want to remove OpenVPN? [y/N]: " -e REMOVE
 			if [[ "$REMOVE" = 'y' || "$REMOVE" = 'Y' ]]; then
@@ -158,9 +163,7 @@ fi
 			fi
 			exit
 			;;
-
-	4) # ==================================================================================================================
-            exit;;
+			4) exit;;
 		esac
 	done
 else
@@ -194,7 +197,7 @@ else
 		2) 
 		PROTOCOL=tcp
 		;;
-	esac
+esac
 	echo
 	echo "What port do you want OpenVPN listening to?"
 	read -p "Port: " -e -i 1194 PORT
@@ -223,10 +226,6 @@ else
 	esac
 	echo ""
 	read -n1 -r -p "กด Enter 1 ครั้งเพื่อเริ่มทำการติดตั้ง หรือกด CTRL+C เพื่อยกเลิก"
-	
-	
-	echo "Finally, tell me your name for the client certificate."
-	echo "Please, use one word only, no special characters."
 	read -p "Client name: " -e -i client CLIENT
 	echo
 	echo "Okay, that was all I needed. We are ready to set up your OpenVPN server now."
@@ -394,14 +393,12 @@ exit 0' > $RCLOCAL
 		IP=$PUBLICIP
 	fi
 	# client-common.txt is created so we have a template to add further users later
-echo "client
+	echo "client
 dev tun
 proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
-remote $CLIENT 999 udp
 remote $IP $PORT
-http-proxy $IP $PROXY
 resolv-retry infinite
 nobind
 persist-key
@@ -409,131 +406,14 @@ persist-tun
 remote-cert-tls server
 auth SHA512
 cipher AES-256-CBC
-comp-lzo
 setenv opt block-outside-dns
 key-direction 1
 verb 3" > /etc/openvpn/client-common.txt
-
-	case $OPENVPNSYSTEM in
-		2)
-		echo "auth-user-pass" >> /etc/openvpn/client-common.txt
-		;;
-	esac
-
-	cd
-	apt-get -y install nginx
-	cat > /etc/nginx/nginx.conf <<END
-user www-data;
-worker_processes 2;
-pid /var/run/nginx.pid;
-events {
-	multi_accept on;
-        worker_connections 1024;
-}
-http {
-	autoindex on;
-        sendfile on;
-        tcp_nopush on;
-        tcp_nodelay on;
-        keepalive_timeout 65;
-        types_hash_max_size 2048;
-        server_tokens off;
-        include /etc/nginx/mime.types;
-        default_type application/octet-stream;
-        access_log /var/log/nginx/access.log;
-        error_log /var/log/nginx/error.log;
-        client_max_body_size 32M;
-	client_header_buffer_size 8m;
-	large_client_header_buffers 8 8m;
-	fastcgi_buffer_size 8m;
-	fastcgi_buffers 8 8m;
-	fastcgi_read_timeout 600;
-        include /etc/nginx/conf.d/*.conf;
-}
-END
-	mkdir -p /home/vps/public_html
-	echo "<pre>by Pirakit Khawpleum | Donate via TrueMoney Wallet : 096-746-2978</pre>" > /home/vps/public_html/index.html
-	echo "<?phpinfo(); ?>" > /home/vps/public_html/info.php
-	args='$args'
-	uri='$uri'
-	document_root='$document_root'
-	fastcgi_script_name='$fastcgi_script_name'
-	cat > /etc/nginx/conf.d/vps.conf <<END
-server {
-    listen       85;
-    server_name  127.0.0.1 localhost;
-    access_log /var/log/nginx/vps-access.log;
-    error_log /var/log/nginx/vps-error.log error;
-    root   /home/vps/public_html;
-    location / {
-        index  index.html index.htm index.php;
-	try_files $uri $uri/ /index.php?$args;
-    }
-    location ~ \.php$ {
-        include /etc/nginx/fastcgi_params;
-        fastcgi_pass  127.0.0.1:9000;
-        fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-    }
-}
-END
-IP2="s/xxxxxxxxx/$IP/g";
-		sed -i $IP2 /etc/squid/squid.conf;
-		/etc/init.d/squid restart
-		/etc/init.d/openvpn restart
-		/etc/init.d/nginx restart
-	fi
-
 fi
 
 	wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/MyGatherBk/PURE/master/Menu"
 	chmod +x /usr/local/bin/menu
-	wget -O /usr/local/bin/Auto-Delete-Client "https://raw.githubusercontent.com/MyGatherBk/PURE/master/Auto-Delete-Client"
-	chmod +x /usr/local/bin/Auto-Delete-Client 
-	apt-get -y install vnstat
-	cd /etc/openvpn/easy-rsa/
-	./easyrsa build-client-full $CLIENT nopass
-	newclient "$CLIENT"
-	cp /root/$CLIENT.ovpn /home/vps/public_html/
-	rm -f /root/$CLIENT.ovpn
-	case $OPENVPNSYSTEM in
-		2)
-		useradd $Usernames
-		echo -e "$Passwords\n$Passwords\n"|passwd $Usernames &> /dev/null
-		;;
-	esac
-	clear
-    echo ""
-    echo "#BY FB : https://web.facebook.com/groups/527056377815518/"
-    echo "#Donate : TrueWallet : 096-746-2978"
-    echo ""
-	echo "OpenVPN, Squid Proxy, Nginx .....Install finish."
-	echo "IP Server : $IP"
-	echo "Port Server : $PORT"
-	if [[ "$PROTOCOL" = 'udp' ]]; then
-		echo "Protocal : UDP"
-	elif [[ "$PROTOCOL" = 'tcp' ]]; then
-		echo "Protocal : TCP"
-	fi
-	echo "Port Nginx : 85"
-	echo "IP Proxy : $IP"
-	echo "Port Proxy : $PROXY"
-	echo ""
-	case $OPENVPNSYSTEM in
-		1)
-		echo "Download My Config : http://$IP:85/$CLIENT.ovpn"
-		;;
-		2)
-		echo "Download Config : http://$IP:85/$CLIENT.ovpn"
-		echo ""
-		echo "Your Username : $Usernames"
-		echo "Your Password : $Passwords"
-		echo "Expire : Never"
-		;;
-		3)
-		echo "Download Config : http://$IP:85/$CLIENT.ovpn"
-		;;
-	esac
+		esac
 	echo ""
 	echo ""
 	echo "====================================================="
@@ -541,8 +421,6 @@ fi
 	echo "====================================================="
 	echo ""
 	exit
-
-	;;
 	# Generates the custom client.ovpn
 	newclient "$CLIENT"
 	echo
