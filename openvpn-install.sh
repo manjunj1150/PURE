@@ -36,25 +36,6 @@ elif [[ -e /etc/centos-release || -e /etc/redhat-release ]]; then
 else
 	echo "Looks like you aren't running this installer on Debian, Ubuntu or CentOS"
 	exit
-fi
-else
-echo ""
-echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
-echo ""
-    echo ""
-    echo "#BY FB : https://web.facebook.com/groups/527056377815518/"
-    echo "#Donate : TrueWallet : 096-746-2978"
-    echo ""
-    echo "The OS you are using cannot support this script"
-    echo "for supported OS is as follows ..."
-	echo ""
-	echo "Ubuntu"
-	echo "Debian"
-	echo "CentOS"
-	echo ""
-	exit
-fi
-
 
 if [[ -e /etc/openvpn/server.conf ]]; then
 	while :
