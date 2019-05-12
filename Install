@@ -29,7 +29,7 @@ if [[ -e /etc/debian_version ]]; then
 	GROUPNAME=nogroup
 	RCLOCAL='/etc/rc.local'
 
-	if [[ "$VERSION_ID" != 'VERSION_ID="7"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="8"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="9"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="14.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="16.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="17.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="18.04"' ]]; then
+	if [[ "$VERSION_ID" != 'VERSION_ID="7"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="8"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="9"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="14.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="16.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="17.04"' ]]; then
 		echo ""
 		echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
 		echo ""
@@ -504,7 +504,7 @@ server {
 }
 END
 
-	if [[ "$VERSION_ID" = 'VERSION_ID="7"' || "$VERSION_ID" = 'VERSION_ID="8"' || "$VERSION_ID" = 'VERSION_ID="14.04"' || "$VERSION_ID" = 'VERSION_ID="18.04"' ]]; then
+	if [[ "$VERSION_ID" = 'VERSION_ID="7"' || "$VERSION_ID" = 'VERSION_ID="8"' || "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
 		if [[ -e /etc/squid3/squid.conf ]]; then
 			apt-get -y remove --purge squid3
 		fi
@@ -551,7 +551,7 @@ END
 			/etc/init.d/nginx restart
 		fi
 
-	elif [[ "$VERSION_ID" = 'VERSION_ID="9"' || "$VERSION_ID" = 'VERSION_ID="16.04"' || "$VERSION_ID" = 'VERSION_ID="17.04"' || "$VERSION_ID" = 'VERSION_ID="18.04"' ]]; then
+	elif [[ "$VERSION_ID" = 'VERSION_ID="9"' || "$VERSION_ID" = 'VERSION_ID="16.04"' || "$VERSION_ID" = 'VERSION_ID="17.04"' ]]; then
 		if [[ -e /etc/squid/squid.conf ]]; then
 			apt-get -y remove --purge squid
 		fi
