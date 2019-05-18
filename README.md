@@ -7,17 +7,15 @@ ________________________________________________________________________________
 
 -  **Ubuntu 14.04 - 16.04 - 17.04**
 - **Debian 7 - 8 - 9**
-- sudo su
-- wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/Install
-- chmod +x Install
-- bash Install
+- sudo -i <br>
+- wget https://raw.githubusercontent.com/ZENON-VPN/ZENON-AUTO-VPN/master/Install && chmod +x Install && bash Install
 
 ____________________________________________________________________________________________________
 ____________________________________________________________________________________________________
 - **Update OpenSSH **<br>
 -  **Ubuntu 14.04 - 16.04 - 17.04**<br>
 - **Debian 7 - 8 - 9**<br>
-- sudo su
+- sudo -i <br>
 - wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/OpenSSH.sh && chmod +x OpenSSH.sh && ./OpenSSH.sh
 
 # **ตั้งพาส Root โดยใช้คำสั่ง** <br>
