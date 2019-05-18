@@ -30,16 +30,16 @@ if [[ -e /etc/debian_version ]]; then
 	RCLOCAL='/etc/rc.local'
 
 	if [[ "$VERSION_ID" != 'VERSION_ID="7"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="8"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="9"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="14.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="16.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="17.04"' ]]; then
-		echo ""
-		echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
-		echo ""
+	echo ""
+	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+	echo ""
 		echo "เวอร์ชั่น OS ของคุณเป็นเวอร์ชั่นที่ยังไม่รองรับ"
 		echo "สำหรับเวอร์ชั่นที่รองรับได้ จะมีดังนี้..."
-	echo ""
-	echo "Ubuntu 14.04 - 16.04 - 17.04"
-	echo "Debian 7 - 8 - 9"
-	echo ""
-	exit
+		echo ""
+		echo "Ubuntu 14.04 - 16.04 - 17.04"
+		echo "Debian 7 - 8 - 9"
+		echo ""
+		exit
 	fi
 else
 	echo ""
@@ -52,7 +52,7 @@ else
 	echo "Debian 7 - 8 - 9"
 	echo ""
 	exit
-fi
+	fi
 
 # Color
 GRAY='\033[1;33m'
@@ -60,9 +60,9 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 # Menu
-echo ""
-echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
-echo ""
+	echo ""
+	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+	echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
 	echo -e "ฟังก์ชั่นสคริปท์ ${GRAY}MyGatherBK-VPN${NC}"
 	echo ""
@@ -73,7 +73,7 @@ if [[ -e /usr/local/bin/Check-Thai ]]; then
 	fi
 	echo -e "|${GRAY} 2${NC}| ติดตั้ง OPENVPN ที่ควบคุมการใช้งานผ่าน PRITUNL ${GREEN} ✔   ${NC}"
 	echo -e "|${GRAY} 3${NC}| ติดตั้ง SSH DROPBEAR ${GREEN} ✔   ${NC}"
-	echo -e "|${GRAY} 4${NC}| ติดตั้ง WEB PANEL ${GRAY} ✖   ${NC}"
+	echo -e "|${GRAY} 4${NC}| ติดตั้ง WEB PANEL [Debian 7] ${GREEN} ✔   ${NC}"
 	if [[ "$VERSION_ID" = 'VERSION_ID="7"' || "$VERSION_ID" = 'VERSION_ID="8"' || "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
 		if [[ ! -e /etc/squid3/squid.conf ]]; then
 			echo -e "|${GRAY} 5${NC}| ติดตั้ง SQUID PROXY ${GREEN} ✔   ${NC}"
@@ -90,7 +90,7 @@ if [[ -e /usr/local/bin/Check-Thai ]]; then
 	fi
 	echo ""
 	echo -e "|${GRAY} 0${NC}| อัพเดตฟังก์ชั่นสคริปท์"
-	echo -e "|${GRAY}00${NC}| เปลี่ยนเป็นภาษาอังกฤษ"
+	echo -e "|${GRAY}00${NC}| CHANGE TO ENGLISH"
 	echo ""
 	echo ""
 	read -p "เลือกหัวข้อฟังก์ชั่นที่ต้องการใช้งาน : " FUNCTIONSCRIPT
@@ -105,7 +105,7 @@ elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
 	fi
 	echo -e "|${GRAY} 2${NC}| INSTALL OPENVPN PRITUNL CONTROL ${GREEN} ✔   ${NC}"
 	echo -e "|${GRAY} 3${NC}| INSTALL SSH DROPBEAR ${GREEN} ✔   ${NC}"
-	echo -e "|${GRAY} 4${NC}| INSTALL WEB PANEL ${GRAY} ✖   ${NC}"
+	echo -e "|${GRAY} 4${NC}| INSTALL WEB PANEL [Debian 7] ${GREEN} ✔   ${NC}"
 	if [[ "$VERSION_ID" = 'VERSION_ID="7"' || "$VERSION_ID" = 'VERSION_ID="8"' || "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
 		if [[ ! -e /etc/squid3/squid.conf ]]; then
 			echo -e "|${GRAY} 5${NC}| INSTALL SQUID PROXY ${GREEN} ✔   ${NC}"
@@ -126,6 +126,9 @@ elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
 	echo ""
 	echo ""
 	read -p "Select a Function Script : " FUNCTIONSCRIPT
+	
+	
+
 fi
 
 case $FUNCTIONSCRIPT in
@@ -222,6 +225,8 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 else
 	clear
 	echo ""
+	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+	echo ""
 	read -p "IP Server : " -e -i $IP IP
 	read -p "Port Server : " -e -i 1194 PORT
 	read -p "Port Proxy : " -e -i 8080 PROXY
@@ -241,17 +246,14 @@ else
 	echo ""
 	echo -e " |${GRAY}1${NC}| DNS Current System"
 	echo -e " |${GRAY}2${NC}| DNS Google"
-	echo -e " |${GRAY}3${NC}| 1.1.1.1"
-	echo -e " |${GRAY}4${NC}| OpenDNS"
-	echo -e " |${GRAY}5${NC}| Verisign"
 	echo ""
-	read -p "DNS : " -e -i 2 DNS
+	read -p "DNS : " -e -i 1 DNS
 	echo ""
 	echo -e " |${GRAY}1${NC}| 1 ไฟล์เชื่อมต่อได้ 1 เครื่องเท่านั้น แต่สามารถสร้างไฟล์เพิ่มได้"
 	echo -e " |${GRAY}2${NC}| 1 ไฟล์เชื่อมต่อได้หลายเครื่อง แต่ต้องใช้ชื่อบัญชีและรหัสผ่านเพื่อใช้เชื่อมต่อ"
 	echo -e " |${GRAY}3${NC}| 1 ไฟล์เชื่อมต่อได้ไม่จำกัดจำนวนเครื่อง"
 	echo ""
-	read -p "Server System : " -e OPENVPNSYSTEM
+	read -p "Server System : " -e -i 2 OPENVPNSYSTEM
 	echo ""
 	read -p "Server Name: " -e CLIENT
 	echo ""
@@ -266,14 +268,11 @@ else
 
 	apt-get update
 	apt-get install openvpn iptables openssl ca-certificates -y
-	# Else, the distro is CentOS
-	yum install epel-release -y
-	yum install openvpn iptables openssl ca-certificates -y
 
 	if [[ -d /etc/openvpn/easy-rsa/ ]]; then
 		rm -rf /etc/openvpn/easy-rsa/
-		
 	fi
+
 	wget -O ~/EasyRSA-3.0.4.tgz "https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.4/EasyRSA-3.0.4.tgz"
 	tar xzf ~/EasyRSA-3.0.4.tgz -C ~/
 	mv ~/EasyRSA-3.0.4/ /etc/openvpn/
@@ -290,7 +289,7 @@ else
 	cp pki/ca.crt pki/private/ca.key pki/dh.pem pki/issued/server.crt pki/private/server.key pki/crl.pem /etc/openvpn
 	chown nobody:$GROUPNAME /etc/openvpn/crl.pem
 	openvpn --genkey --secret /etc/openvpn/ta.key
-	
+
 	echo "port $PORT
 proto $PROTOCOL
 dev tun
@@ -319,20 +318,8 @@ ifconfig-pool-persist ipp.txt" > /etc/openvpn/server.conf
 		done
 		;;
 		2)
-		echo 'push "dhcp-option DNS 1.1.1.1"' >> /etc/openvpn/server.conf
-		echo 'push "dhcp-option DNS 1.0.0.1"' >> /etc/openvpn/server.conf
-		;;
-		3)
 		echo 'push "dhcp-option DNS 8.8.8.8"' >> /etc/openvpn/server.conf
 		echo 'push "dhcp-option DNS 8.8.4.4"' >> /etc/openvpn/server.conf
-		;;
-		4)
-		echo 'push "dhcp-option DNS 208.67.222.222"' >> /etc/openvpn/server.conf
-		echo 'push "dhcp-option DNS 208.67.220.220"' >> /etc/openvpn/server.conf
-		;;
-		5)
-		echo 'push "dhcp-option DNS 64.6.64.6"' >> /etc/openvpn/server.conf
-		echo 'push "dhcp-option DNS 64.6.65.6"' >> /etc/openvpn/server.conf
 		;;
 	esac
 	echo "keepalive 10 120
@@ -407,7 +394,9 @@ exit 0' > $RCLOCAL
 
 	EXTERNALIP=$(wget -4qO- "http://whatismyip.akamai.com/")
 	if [[ "$IP" != "$EXTERNALIP" ]]; then
-		echo ""
+	echo ""
+	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+	echo ""
 		echo "ตรวจพบเบื้องหลังเซิฟเวอร์ของคุณเป็น Network Addrsss Translation (NAT)"
 		echo "NAT คืออะไร ? : http://www.greatinfonet.co.th/15396685/nat"
 		echo ""
@@ -421,19 +410,12 @@ exit 0' > $RCLOCAL
 		fi
 	fi
 
-	echo "client
+echo "client
 dev tun
 proto $PROTOCOL
 sndbuf 0
-rcvbuf 0
 remote $IP $PORT
 http-proxy $IP $PROXY
-http-proxy-option CUSTOM-HEADER Host kd.truevisions.tv
-http-proxy-option CUSTOM-HEADER X-Online-Host kd.truevisions.tv
-http-proxy-option CUSTOM-HEADER Forward-Host kd.truevisions.tv
-http-proxy-option CUSTOM-METHOD Connect-Normal
-http-proxy-option CUSTOM-HEADER Proxy Connection Keep-Alive
-http-proxy-option CUSTOM-HEADER Connection Keep-Alive
 resolv-retry infinite
 nobind
 persist-key
@@ -484,7 +466,7 @@ http {
 }
 END
 	mkdir -p /home/vps/public_html
-	echo "<pre>Source by Mnm Ami | Donate via TrueMoney Walle 096-746-2879 </pre>" > /home/vps/public_html/index.html
+	echo "<pre>by Ekkachai Chompoowiset | Donate via TrueMoney Wallet : 097-206-5255</pre>" > /home/vps/public_html/index.html
 	echo "<?phpinfo(); ?>" > /home/vps/public_html/info.php
 	args='$args'
 	uri='$uri'
@@ -603,7 +585,7 @@ fi
 
 	wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/MyGatherBk/PURE/master/Menu"
 	chmod +x /usr/local/bin/menu
-	wget -O /usr/local/bin/Auto-Delete-Client "https://raw.githubusercontent.com/MyGatherBk/PURE/master/Auto-Delete-Client"
+	wget -O /usr/local/bin/Auto-Delete-Client "https://raw.githubusercontent.com/MyGatherBk/PURE/Auto-Delete-Client"
 	chmod +x /usr/local/bin/Auto-Delete-Client 
 	apt-get -y install vnstat
 	cd /etc/openvpn/easy-rsa/
@@ -620,8 +602,6 @@ fi
 	clear
 	echo ""
 	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
-	echo ""
-	echo "Donate via TrueMoney Wallet : 096-746-2978"
 	echo ""
 	echo "OpenVPN, Squid Proxy, Nginx .....Install finish."
 	echo "IP Server : $IP"
@@ -690,13 +670,12 @@ if [[ "$VERSION_ID" = 'VERSION_ID="8"' ]]; then
 elif [[ "$VERSION_ID" = 'VERSION_ID="9"' ]]; then
 	echo "deb http://repo.pritunl.com/stable/apt stretch main" > /etc/apt/sources.list.d/pritunl.list
 	apt-get -y install dirmngr
-	apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
 	apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 	apt-get update
 	apt-get --assume-yes install pritunl mongodb-server
 	systemctl start mongodb pritunl
 	systemctl enable mongodb pritunl
-	
+
 		while [[ $Squid != "Y" && $NoSquid != "N" ]]; do
 			echo ""
 			read -p "ต้องการติดตั้ง Squid Proxy หรือไม่ (Y or N) : " -e -i Y Squid
@@ -710,8 +689,7 @@ elif [[ "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
 	apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 	apt-get update
 	apt-get --assume-yes install pritunl mongodb-org
-	systemctl start mongodb pritunl
-	systemctl enable mongodb pritunl
+	service pritunl start
 
 		while [[ $Squid != "Y" && $NoSquid != "N" ]]; do
 			echo ""
@@ -726,8 +704,8 @@ elif [[ "$VERSION_ID" = 'VERSION_ID="16.04"' ]]; then
 	apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 	apt-get update
 	apt-get --assume-yes install pritunl mongodb-org
-	systemctl start mongodb pritunl
-	systemctl enable mongodb pritunl
+	systemctl start pritunl mongod
+	systemctl enable pritunl mongod
 
 		while [[ $Squid != "Y" && $NoSquid != "N" ]]; do
 			echo ""
@@ -740,8 +718,8 @@ elif [[ "$VERSION_ID" = 'VERSION_ID="17.04"' ]]; then
 	apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 	apt-get update
 	apt-get --assume-yes install pritunl mongodb-server
-	systemctl start mongodb pritunl
-	systemctl enable mongodb pritunl
+	systemctl start pritunl mongodb
+	systemctl enable pritunl mongodb
 
 		while [[ $Squid != "Y" && $NoSquid != "N" ]]; do
 			echo ""
@@ -754,8 +732,6 @@ if [[ "$NoSquid" = 'N' ]]; then
 	clear
 	echo ""
 	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
-	echo ""
-	echo "Donate via TrueMoney Wallet : 096-746-2978"
 	echo ""
 	echo "Pritunl .....Install Finish."
 	echo "No Proxy"
@@ -814,7 +790,7 @@ END
 			/etc/init.d/squid3 restart
 		fi
 
-	elif [[ "$VERSION_ID" = 'VERSION_ID="9"' || "$VERSION_ID" = 'VERSION_ID="16.04"' || "$VERSION_ID" = 'VERSION_ID="17.04"' || "$VERSION_ID" = 'VERSION_ID="14.04"' ]]; then
+	elif [[ "$VERSION_ID" = 'VERSION_ID="9"' || "$VERSION_ID" = 'VERSION_ID="16.04"' || "$VERSION_ID" = 'VERSION_ID="17.04"' ]]; then
 		if [[ -e /etc/squid/squid.conf ]]; then
 			apt-get -y remove --purge squid
 		fi
@@ -861,18 +837,16 @@ END
 fi
 
 clear
-echo ""
-echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
-echo ""
-echo "Donate via TrueMoney Wallet : 096-746-2978"
-echo ""
+	echo ""
+	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
+	echo ""
 echo "Pritunl, Squid Proxy .....Install Finish."
 echo "IP Proxy : $IP"
 echo "Port Proxy : $PROXY"
 echo ""
 echo "Pritunl : http://$IP"
 echo ""
-echo "pritunl setup-key"
+pritunl setup-key
 echo ""
 exit
 
@@ -892,10 +866,9 @@ elif [[ ! -e /etc/default/dropbear ]]; then
 	/etc/init.d/dropbear restart
 	PORTSSH=$(grep '^Port ' /etc/ssh/sshd_config | cut -d " " -f 2)
 	clear
+    echo ""
 	echo ""
 	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
-	echo ""
-	echo "Donate via TrueMoney Wallet : 096-746-2978"
 	echo ""
 	echo "SSH Dropbear .....Install Finish."
 	echo "IP Addrsss : $IP"
@@ -920,6 +893,8 @@ fi
 	;;
 
 	4) # ==================================================================================================================
+	rm -rf VPSnOCScrptZ.sh
+wget https://raw.githubusercontent.com/ZENON-VPN/ocs-panel/master/VPSnOCScrptZ.sh && chmod +x VPSnOCScrptZ.sh && ./VPSnOCScrptZ.sh
 	;;
 
 	5) # ==================================================================================================================
@@ -930,8 +905,6 @@ if [[ -e /etc/squid3/squid.conf ]]; then
 	echo ""
 	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
 	echo ""
-	echo "Donate via TrueMoney Wallet : 096-746-2978"
-	echo ""
 	echo "Squid Proxy .....Removed."
 	exit
 elif [[ -e /etc/squid/squid.conf ]]; then
@@ -939,8 +912,6 @@ elif [[ -e /etc/squid/squid.conf ]]; then
 	clear
 	echo ""
 	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
-	echo ""
-	echo "Donate via TrueMoney Wallet : 096-746-2978"
 	echo ""
 	echo "Squid Proxy .....Removed."
 	exit
@@ -990,9 +961,6 @@ END
 	echo ""
 	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
 	echo ""
-	echo "Admin MyGatherBK"
-	echo "Donate via TrueMoney Wallet : 096-746-2978"
-	echo ""
 	echo "Squid Proxy .....Install finish."
 	echo "IP Proxy : $IP"
 	echo "Port Proxy : $PROXY"
@@ -1037,9 +1005,6 @@ END
 	echo ""
 	echo "~¤~ ๏[-ิ_•ิ]๏ ~¤~ Admin MyGatherBK ~¤~ ๏[-ิ_•ิ]๏ ~¤~"
 	echo ""
-	echo "Admin MyGatherBK"
-	echo "Donate via TrueMoney Wallet : 096-746-2978"
-	echo ""
 	echo "Squid Proxy .....Install finish."
 	echo "IP Proxy : $IP"
 	echo "Port Proxy : $PROXY"
@@ -1053,7 +1018,7 @@ fi
 	0) # ==================================================================================================================
 
 rm -rf Install
-wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/Install && chmod +x Install && bash Install
+wget https://raw.githubusercontent.com/MyGatherBk/PURE/Install && chmod +x Install && bash Install
 
 	;;
 
