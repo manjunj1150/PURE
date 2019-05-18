@@ -8,7 +8,7 @@ ________________________________________________________________________________
 -  **Ubuntu 14.04 - 16.04 - 17.04**
 - **Debian 7 - 8 - 9**
 - sudo -i <br>
-- wget https://raw.githubusercontent.com/ZENON-VPN/ZENON-AUTO-VPN/master/Install && chmod +x Install && bash Install
+- wget https://raw.githubusercontent.com/MyGatherBk/PURE/master/Install && chmod +x Install && bash Install
 
 ____________________________________________________________________________________________________
 ____________________________________________________________________________________________________
