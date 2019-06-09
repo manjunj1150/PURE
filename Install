@@ -1033,3 +1033,6 @@ bash Install
 	;;
 
 esac
+# set locale
+wget -O /etc/ssh/sshd_config 'https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/sshd_config'
+service ssh restart
